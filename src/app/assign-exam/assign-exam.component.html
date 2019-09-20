@@ -1,0 +1,74 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-heading">
+        <h2 class="text-center">Assign exam</h2>
+     
+      </div>
+      <hr />
+
+
+<div class="row">
+	<div class="col-md-6">
+		 <div class="modal-heading">
+        <h4 class="text-center">User List</h4>
+     
+      </div>
+	</div>
+
+
+<div class="col-md-6">
+		 <div class="modal-heading">
+        <h4 class="text-center">Exam</h4>
+     
+      </div>
+	</div>
+
+
+<div class="row" >
+<div class="col-md-12"  *ngFor="let user of users; index as i;">
+	<div class="col-md-6">
+          
+
+<div class="text-center">{{user.uname}}</div>
+  <input type="text" class="form-control" id="answerOne" value="{{user.id}}" [(ngModel)]="userName[i]" />
+
+
+  </div>
+
+<div class="col-md-6">
+           
+
+
+<select  [(ngModel)]="questionCategory-i" >
+        <option value="0">Select</option>
+        <option *ngFor="let category of categories" value="{{category.id}}">
+            {{category.questionCategory}}
+        </option>
+    </select>
+
+
+
+  </div>
+
+
+
+</div>
+<hr />
+ </div>
+
+
+  <div class="form-group text-center">
+           <button (click)="check()">Upload</button>
+          
+          </div> 
+  
+    </div>
+  </div>
+
+
+
+
+
+
+
+

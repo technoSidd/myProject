@@ -1,0 +1,72 @@
+
+
+
+
+
+
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-heading">
+        <h2 class="text-center">Check Resume</h2>
+        
+      </div>
+      <hr />
+      <div class="modal-body">
+       
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+              <span class="glyphicon glyphicon-user"></span>
+              </span>
+
+
+<select (change)="selectName();" [(ngModel)]="nameId" name="Id" class="form-control">
+        <option value="0">--All--</option>
+        <option *ngFor="let resume of resumes" value={{resume.id}}>
+            {{resume.name}}
+        </option>
+    </select>
+
+<!-- 
+   <select id="Id" #Id="ngModel" class="hideLabel form-control" [(ngModel)]="nameId" name="Id" (change)="selectName();">  
+                           <option selected="" value=""></option>  
+                        <option [ngValue]="k.Id" *ngFor="let k of nameList">  
+                            {{k.Name}}  
+                     </option>  
+                </select>   -->
+
+
+            </div>
+          </div>
+         
+
+
+      
+
+       
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Skills</th> 
+    <th>Qualification</th>
+    <th>Experience</th>
+    <th>Phone</th>
+  </tr>
+  <tr>
+    <td>{{msgg.data[0].name}}</td>
+     <td>{{msgg.data[0].skills}}</td>
+      <td>{{msgg.data[0].qualification}}</td>
+       <td>{{msgg.data[0].experience}}</td>
+        <td>{{msgg.data[0].phone}}</td>
+   
+  </tr>
+ 
+</table>

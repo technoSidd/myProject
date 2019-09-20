@@ -1,0 +1,83 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-heading">
+        <h2 class="text-center">Upload Resume</h2>
+        <h4 *ngIf="msgg" class="text-center" style="color: #1edc1c;">
+{{msgg.msg}}
+</h4>
+      </div>
+      <hr />
+      <div class="modal-body">
+       
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+              <span class="glyphicon glyphicon-user"></span>
+              </span>
+              <input type="text" class="form-control" placeholder="Name"  [(ngModel)]="name" />
+          
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+              <span class="glyphicon glyphicon-lock"></span>
+              </span>
+               <input type="text" class="form-control" placeholder="qualification" [(ngModel)]="qualification" />
+          
+
+            </div>
+
+          </div>
+
+
+
+ <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+              <span class="glyphicon glyphicon-lock"></span>
+              </span>
+               <input type="text" class="form-control" placeholder="skills"  [(ngModel)]="skills" />
+          
+
+            </div>
+
+          </div>
+
+
+
+
+ <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+              <span class="glyphicon glyphicon-lock"></span>
+              </span>
+               <input type="number" class="form-control" placeholder="experience" [(ngModel)]="experience" />
+          
+
+            </div>
+
+          </div>
+
+
+           <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+              <span class="glyphicon glyphicon-lock"></span>
+              </span>
+               <input type="number" class="form-control" placeholder="phone"  [(ngModel)]="phone" />
+          
+
+            </div>
+
+          </div>
+
+          <div class="form-group text-center">
+           <button (click)="onSubmitResume()">Upload</button>
+          
+          </div>
+
+       
+      </div>
+    </div>
+  </div>

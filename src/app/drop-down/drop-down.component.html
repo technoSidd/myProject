@@ -1,0 +1,73 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-heading">
+        <h2 class="text-center">Multiple Drop Down</h2>
+        <h4  class="text-center" style="color: #1edc1c;"></h4>
+      </div>
+      <hr />
+      <div class="modal-body">
+       
+        <div class="form-group">
+      <label for="email">Country:</label>
+  
+<select  [(ngModel)]="countryid"  class="form-control" (change)="onChangeCountry()">
+        <option value="0">Select</option>
+        <option *ngFor="let country of countries" [value]="country.id" >
+            {{country.countryName}}
+        </option>
+    </select>
+
+
+
+
+
+    </div>
+
+ <div class="form-group">
+      <label for="email">State:</label>
+
+  
+<select  [(ngModel)]="stateid"  class="form-control" (change)="onChangeState()" >
+        <option value="0">Select</option>
+        <option *ngFor="let state of statesName" [value]="state.id" >
+            {{state.stateName}}
+        </option>
+    </select>
+
+
+
+
+
+    </div>
+       
+
+<div class="form-group">
+      <label for="email">City:</label>
+
+  
+<select  [(ngModel)]="cityid"  class="form-control" >
+        <option value="0">Select</option>
+        <option *ngFor="let city of CitiesName" [value]="city.id" >
+            {{city.cityName}}
+        </option>
+    </select>
+
+
+
+
+
+    </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
